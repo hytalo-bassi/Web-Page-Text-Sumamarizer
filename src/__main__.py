@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
+import sys
 from .nl_processing import *
 from nltk import download
 import time
@@ -12,11 +13,6 @@ options = Options()
 options.headless = True
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-urls = [
-    'https://towardsdatascience.com/attention-is-all-you-need-discovering-the-transformer-paper-73e5ff5e0634',
-    # Adicione mais URLs aqui
-]
-
 
 def get_page_text(url):
     driver.get(url)
@@ -25,8 +21,13 @@ def get_page_text(url):
     return body_text
 
 
-def main():
+def main(urls: [str]):
     results = []
+    
+    if len(urls) == 0:
+        print("No URLs")
+        sys.exit()
+
     for url in urls:
         try:
             text = get_page_text(url)
@@ -46,6 +47,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])
 
 driver.quit()
