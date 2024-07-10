@@ -35,12 +35,12 @@ Este projeto utiliza Selenium e NLTK para extrair, resumir e analisar texto de p
 
 3. **Execute o script**:
     ```bash
-    python -m src
+    python -m src [urls]
     ```
 
 4. **Verifique os resultados**:
     - Os resultados serão exibidos no console. Cada resultado inclui o URL da página, um resumo do texto e uma lista dos termos mais relevantes.
-
+a
 ## Estrutura do Código
 
 - `find_relevant_terms(text)`: Encontra os termos mais relevantes no texto, excluindo stopwords.
