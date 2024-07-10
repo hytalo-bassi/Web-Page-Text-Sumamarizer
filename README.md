@@ -20,14 +20,12 @@ Este projeto utiliza Selenium e NLTK para extrair, resumir e analisar texto de p
     pip install -r requirements.txt
     ```
 
-3. **Baixe os recursos do NLTK**:
-    ```python
-    import nltk
-    nltk.download('punkt')
-    nltk.download('stopwords')
+3. **Baixe os recursos do programa**:
+    ```bash
+    python src/setup.py
     ```
-
 ## Uso
+
 
 1. **Configure o WebDriver**:
     - O script usa o ChromeDriver em modo headless. Certifique-se de que o ChromeDriver está instalado e configurado corretamente.
@@ -36,8 +34,8 @@ Este projeto utiliza Selenium e NLTK para extrair, resumir e analisar texto de p
     - Adicione as URLs das páginas web que você deseja processar na lista `urls` no script.
 
 3. **Execute o script**:
-    ```sh
-    python main.py
+    ```bash
+    python -m src
     ```
 
 4. **Verifique os resultados**:
@@ -45,10 +43,8 @@ Este projeto utiliza Selenium e NLTK para extrair, resumir e analisar texto de p
 
 ## Estrutura do Código
 
-- `get_page_text(url)`: Extrai o texto do corpo de uma página web.
 - `find_relevant_terms(text)`: Encontra os termos mais relevantes no texto, excluindo stopwords.
 - `generate_summary(text, num_sentences)`: Gera um resumo do texto, baseado na frequência das palavras.
-- `main()`: Função principal que realiza a extração de texto, geração de resumo e identificação de termos relevantes para cada URL na lista `urls`.
 
 ## Contribuição
 
