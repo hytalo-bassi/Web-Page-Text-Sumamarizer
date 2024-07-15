@@ -1,6 +1,6 @@
 # Web Page Text Summarizer and Analyzer
 
-Este projeto utiliza Selenium e NLTK para extrair, resumir e analisar texto de páginas web. Ele acessa uma lista de URLs, extrai o conteúdo de cada página, gera um resumo e identifica os termos mais relevantes.
+Este projeto utiliza processamento de linguagem natural para extrair, resumir e analisar texto de páginas web. O algoritmo consegue resumir textos e identificar as palavras mais frequentes de forma rápida.
 
 ## Pré-requisitos
 
