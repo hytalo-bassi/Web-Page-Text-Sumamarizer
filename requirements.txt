@@ -1,0 +1,5 @@
+selenium 
+requests
+beautifulsoup4
+nltk 
+webdriver_manager
